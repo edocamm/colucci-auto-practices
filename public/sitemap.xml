@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Percorsi relativi al dominio definitivo: sostituire il prefisso una volta confermato l'URL. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc></url>
+  <url><loc>/agenzia</loc></url>
+  <url><loc>/servizi</loc></url>
+  <url><loc>/come-funziona</loc></url>
+  <url><loc>/guide</loc></url>
+  <url><loc>/faq</loc></url>
+  <url><loc>/contatti</loc></url>
+  <url><loc>/privacy-policy</loc></url>
+</urlset>
