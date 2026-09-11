@@ -13,8 +13,8 @@ import { contactSchema, submitContact, type ContactData, type SubmitResult } fro
 import { cn } from "@/lib/utils";
 
 type Props = {
-  defaultPractice?: ContactData["practiceType"];
-  defaultVehicle?: ContactData["vehicleOrigin"];
+  defaultPractice?: ContactData["practiceType"] | undefined;
+  defaultVehicle?: ContactData["vehicleOrigin"] | undefined;
 };
 
 const selectClass =
@@ -37,8 +37,8 @@ export function ContactForm({ defaultPractice, defaultVehicle }: Props) {
   } = useForm<ContactData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      practiceType: defaultPractice,
-      vehicleOrigin: defaultVehicle,
+      ...(defaultPractice ? { practiceType: defaultPractice } : {}),
+      ...(defaultVehicle ? { vehicleOrigin: defaultVehicle } : {}),
       preferredChannel: "Telefono",
       originCountry: "",
       website: "",

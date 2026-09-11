@@ -61,7 +61,7 @@ export function localBusinessJsonLd() {
       addressCountry: site.address.countryCode,
     },
   };
-  if (site.seo.siteUrl) data.url = site.seo.siteUrl;
-  if (sameAs.length) data.sameAs = sameAs;
+  if (site.seo.siteUrl) data["url"] = site.seo.siteUrl;
+  if (sameAs.length) data["sameAs"] = sameAs;
   return data;
 }

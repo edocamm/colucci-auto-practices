@@ -144,7 +144,7 @@ export type Service = {
   cta: string;
   icon: ServiceIconName;
   /** Valore corrispondente nel form di contatto. */
-  formValue: string;
+  formValue: (typeof practiceTypes)[number];
   note?: string;
 };
 

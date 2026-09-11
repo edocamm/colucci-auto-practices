@@ -58,7 +58,7 @@ export function PracticeFinder() {
               <Button asChild>
                 <Link
                   to="/contatti"
-                  search={{ pratica: selected.formValue, veicolo: selected.vehicle }}
+                  search={selected.vehicle ? { pratica: selected.formValue, veicolo: selected.vehicle } : { pratica: selected.formValue }}
                 >
                   {site.cta.primary}
                   <ArrowRight aria-hidden="true" />

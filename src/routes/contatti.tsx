@@ -15,9 +15,9 @@ const isVehicle = (v: unknown): v is Vehicle => typeof v === "string" && (vehicl
 
 export const Route = createFileRoute("/contatti")({
   component: ContattiPage,
-  validateSearch: (search: Record<string, unknown>): { pratica?: Practice; veicolo?: Vehicle } => ({
-    pratica: isPractice(search.pratica) ? search.pratica : undefined,
-    veicolo: isVehicle(search.veicolo) ? search.veicolo : undefined,
+  validateSearch: (search: Record<string, unknown>): { pratica?: Practice | undefined; veicolo?: Vehicle | undefined } => ({
+    pratica: isPractice(search["pratica"]) ? search["pratica"] : undefined,
+    veicolo: isVehicle(search["veicolo"]) ? search["veicolo"] : undefined,
   }),
   head: () =>
     buildHead({
