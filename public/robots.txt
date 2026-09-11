@@ -1,14 +1,7 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Ambiente dimostrativo: indicizzazione disabilitata.
+# Prima della pubblicazione definitiva sostituire con:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://DOMINIO-DEFINITIVO/sitemap.xml
 User-agent: *
-Allow: /
+Disallow: /
